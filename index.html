@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionStore - Your Style, Our Passion</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        header .logo h1 {
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        header nav a:hover {
+            color: #e74c3c;
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            background-image: url('https://www.w3schools.com/w3images/fjords.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-attachment: fixed;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        #home .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: slideIn 2s ease-out;
+        }
+
+        #home .hero p {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Shop Section */
+        #shop {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        #shop h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-card .price {
+            font-size: 1.2rem;
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+
+        .product-card .order-btn {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-card .order-btn:hover {
+            background-color: #27ae60;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>FashionStore</h1>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" id="login-btn">Login</a>
+            <a href="javascript:void(0);" id="logout-btn" style="display:none;">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero">
+            <h2>Discover Your Style</h2>
+            <p>Quality clothing for every occasion</p>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <h2>Our Latest Collection</h2>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1561948955-3ebd2b58e7f6?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1lbidpbiBzaGlydHxlbnwwfDB8fHww&ixlib=rb-1.2.1&q=80&w=400" alt="Shirt 1">
+                <h3>Classic White Shirt</h3>
+                <p class="price">Rs. 1,499</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1588925084403-1c727faabdd3?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg5NjN8MHwxfGFsbHwxfHx8fHx8fHx8fHwxNjEyNzUyOTYy&ixlib=rb-1.2.1&q=80&w=400" alt="Shirt 2">
+                <h3>Blue Denim Jacket</h3>
+                <p class="price">Rs. 2,999</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1569200589-bfd66ad8b72b?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg5NjN8MHwxfGFsbHwxfHx8fHx8fHx8fHwxNjEyNzUyOTYy&ixlib=rb-1.2.1&q=80&w=400" alt="Shirt 3">
+                <h3>Casual Polo T-shirt</h3>
+                <p class="price">Rs. 1,199</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1592145620421-604ed0764018?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg5NjN8MHwxfGFsbHwxfHx8fHx8fHx8fHwxNjEyNzUyOTYy&ixlib=rb-1.2.1&q=80&w=400" alt="Shirt 4">
+                <h3>Elegant Blazer</h3>
+                <p class="price">Rs. 5,499</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1547615040-53e303d3bcbf?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg5NjN8MHwxfGFsbHwxfHx8fHx8fHx8fHwxNjEyNzUyOTYy&ixlib=rb-1.2.1&q=80&w=400" alt="Shirt 5">
+                <h3>Summer Shorts</h3>
+                <p class="price">Rs. 1,199</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1601976021437-d5ee63929c8b?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg5NjN8MHwxfGFsbHwxfHx8fHx8fHx8fHwxNjEyNzUyOTYy&ixlib=rb-1.2.1&q=80&w=400" alt="Shirt 6">
+                <h3>Sports Wear Jacket</h3>
+                <p class="price">Rs. 3,499</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 FashionStore. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript (for login/sign-up/logout simulation) -->
+    <script>
+        let loggedIn = false;
+
+        // Simulating the sign-in process
+        document.getElementById('login-btn').addEventListener('click', function() {
+            if (!loggedIn) {
+                let email = prompt("Enter your email:");
+                let password = prompt("Enter your password:");
+                if (email && password) {
+                    alert(`Welcome back, ${email}!`);
+                    loggedIn = true;
+                    document.getElementById('login-btn').style.display = 'none';
+                    document.getElementById('logout-btn').style.display = 'inline-block';
+                }
+            }
+        });
+
+        // Logout functionality
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            loggedIn = false;
+            alert("Logged out successfully!");
+            document.getElementById('login-btn').style.display = 'inline-block';
+            document.getElementById('logout-btn').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
